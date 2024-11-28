@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: '17'
           java-package: 'jdk'
-          distribution: 'temurin'
+          distribution: 'temurin'  # Add distribution, 'temurin' is the default choice
           check-latest: false
           server-id: github
           server-username: ${{ github.actor }}
@@ -33,5 +33,5 @@ jobs:
         if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}  # Use the PAT token
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Ensure you use the correct token here
           publish_dir: ./target
