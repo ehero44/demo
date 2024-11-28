@@ -17,7 +17,14 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-
+          java-package: 'jdk'
+          distribution: 'adoptopenjdk'  # You can use 'zulu', 'adoptopenjdk', or 'temurin'
+          check-latest: false
+          server-id: github
+          server-username: ${{ github.actor }}
+          server-password: ${{ secrets.GITHUB_TOKEN }}
+          overwrite-settings: true
+          job-status: success
       - name: Build with Maven
         run: mvn clean install
 

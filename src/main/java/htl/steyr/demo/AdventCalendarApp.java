@@ -137,7 +137,7 @@ public class AdventCalendarApp extends Application {
                     raetsel.put(i, raetselFragen.get(raetselIndex));
                     raetselIndex++;
                 } else {
-                    raetsel.put(i, "Kein Rätsel für dieses Türchen verfügbar.");
+                    raetsel.put(i, "Kein Rätsel  für dieses Türchen verfügbar.");
                 }
             }
         }
